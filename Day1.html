@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web Development Course by Rohit Sir</h1>
+    <h1><a href="Day1.html">Day 1</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day2.html">Day 2</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day3.html">Day 3</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day4.html">Day 4</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day5.html">Day 5</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day6.html">Day 6</a></h1>
+    <h2>What is Internet and How does it Work?</h2>
+    <p>We use Internet to communicate between two devices or allow data transfer. In simple words the data transfer is just like sending post through post office. e.g.,If I want to send an Iphone to someone then,</p>
+    <ol>
+        <li>First, I will pack the Iphone in a box.</li>
+        <li>Label the box with my address (i.e. Senders Address) followed by the buyers address (i.e. Receivers Address)</li>
+        <li>Send it to the Post Office.</li>
+        <li>The buyer will receive it.</li>
+    </ol>
+    <p>Like this if we want to send someone anything then we need their <b>Address</b> likewise in Internet we need the devices <b>IP Address.</b> </p>
+    <h2>IP Address</h2>
+    <img src="./image01.png" height="150px" alt="IP Address image">
+    <p>For sending any message we require:
+        <ol>
+            <li>Senders IP Address</li>
+            <li>Date/Message</li>
+            <li>Recievers IP Address</li>
+        </ol>
+        <img src="./image02.png" height="100px" alt="message sending through IP Address image">
+    </p>
+    <p>IP Address is Dynamic: When we connect Internet, we have IP Address given by someone which gives us an identity to the Internet. This is not a permanent address. Whenever we disconnect the Internet, the IP Address will be taken away and a new IP Address will be given, and the IP Address we were having before will be given to some another person's server.
+        <br>
+        To check what is your IP Address visit website: 
+        <a href="https://whatismyipaddress.com/">whatismyipaddress.com</a>
+        <br>
+        <h3>Who assigns IP Address?</h3>
+        ISP(Internet Service Provider) gives us IP Address.
+    </p>
+    <p>When we go to browser and type Coder Army then we get the website but how we get it without knowing Coder Army's IP Address?
+        <br>
+        <h3>DNS (Domain Name System)</h3>
+        DNS maintains a book where there are IP Address of the websites so we do not need to know the IP Address.
+        <br>
+        <img src="./image03.png" height="250px" alt="DNS Image">
+        <br>
+        Likewise we can use a website: <a href="https://www.nslookup.io/">nslookup.io</a>. Here we can search any website IP Addresses.
+        <br>
+        The use of DNS is to collect all the IP Addresses of the websites which are hard for a human to remember. So that we could just remember the name of the website intead of its IP Address.
+        <h4>In-depth working of DNS</h4>
+         
+        <ol>
+            <li>If you type google.com then first it will check whether your device is having google IP Address, if yes then it will not go to DNS and directly link you with the google IP Address.</li>
+            <li>But if you do not have IP Address in your device then, it comes to the Recursive Server/DNS Resolver. First it will check if it is present here if yes, then it will directly reply back to the server.</li>
+            <li>If not, then it will call your Root server. There are total 13 Root server in the world. So which ever is your nearnest will get connect to your server. If your website is not available in the root server then it will check the domain of the website (like if it is google.com, google.in, google.io) then based on that Root server will deploy its TLD Address to the Recursive server.</li>
+            <li>When Recursive server will know the domain(i.e., .com) then it will search it in TLD server.TLD(Top Level Domain) will not give the address directly. TLD server then deploy to Recursive Server and finally request the Authoritative server and gives the IP Address.</li>
+        </ol>
+        <img src="./image04.png" height="240px" alt="DNS Working Image">
+    </p>
+    <p><h2>Problem in Data Transfer and MAC Address</h2>
+        Suppose we want personal chat of someone on instagram. But due to some reasons instagram server reply late(e.g., for 5 minutes) and while that time our internet got down. So ISP will give your IP Address to someone else therefore your personal chats also gone to that unknown person. To prevent from this situation we use MAC Address.
+        <h3>MAC Address</h3>
+        MAC Address(Media Access Control) is a permanent address and every device have their own.It is the actual address of your device and nobody could take it. It is permanently attached to your device. 
+        <br>
+        When we send request MAC Address will also go with sender and receiver address.
+        <br>
+        <img src="./image05.png" height="80px" alt="mac image">
+        <br>
+        So if IP Address is same but response can't go to someone else if MAC Address is different.
+        <h3>Port Number</h3>
+        There are multiple tabs open in our browser and we watch reels in one tab. When the response come from Instagram server with IP+MAC but how it will know on which tab it should go so for that we have Port Number.
+        On the basis of Port Number it will decide on which tab it should go.
+        <br>
+        <img src="./image06.png" height="200px" alt="port number Image">
+    </p>
+    <p><h2>IPv4 and IPv6</h2>
+    <h3>IPv4</h3>
+    An IPv4 (Internet Protocol version 4) address is the classic IP address format everyone is used to seeing. Structure: It's a 32-bit number. To make it readable for humans, we divide it into four 8-bit sections, and write each section as a decimal number from 0 to 255.
+    Example: 172.217.16.142(one of Google's addresses). The Big Problem (The Why): A 32-bit number means there's a hard limit on the total number of possible addresses: 2^32, which is about 4.3 billion. 
+    <br>
+    <h4>Why they dont take 2^64?</h4>
+    They think of future that 2^64 may become less for the devices in future so they take 2^128.
+    <br>
+    <h3>IPv6</h3>
+    IPv6 (Internet Protocol version 6) is the next generation of the Internet Protocol. Its primary purpose was to solve the address exhaustion problem of IPv4.
+    <br>
+    An example of a full IPv6 address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+    <br>
+    It's broken down into:
+    <ul>
+        <li>Eight groups of four Hexadecimal characters.</li>
+        <li>The groups are seperated by colons(:).</li>
+    </ul>
+    The fundamental <b>difference between IPv4 and IPv6</b> is the size of the address:
+    <ul>
+        <li><b>IPv4:</b> Uses a 32-bit address, giving us ~4.3 billion unique addresses.</li>
+        <li><b>IPv6:</b> Uses a 128-bit address.</li>
+    </ul>
+    <h3>MAC Address</h3>
+    A MAC address is a 48-bit number. To make it readable for humans, it's typically written as 12 hexadecimal digits.
+    The most common ways you'll see it displayed are:
+    <ol>
+        <li>Colon-Separated (Most Common): 3C:22:FB:A3:B4:C5</li>
+        <li>Hyphen-Separated (Common on Windows): 3C-22-FB-A3-B4-C5</li>
+        <li>Period-Separated (Used by Cisco and other network gear): 3c22.fba3.b4c5</li>
+        <li>No Separators (Less common, seen in some software): 3C22FBA3B4C5</li>
+    </ol>
+    We have many MAC Addresses on Windows. For this we need to write the command on the terminal: ipconfig/all
+    <br>
+    The reason why we have many MAC Address for a single device is so that we can send data in many ways:
+    <ul>
+        <li>Bluetooth</li>
+        <li>USB Cable</li>
+        <li>Airdrop(for IOS User)</li>
+        <li>through Port Number</li>
+    </ul>
+    <h3>Port Number</h3>
+    A port number is a 16-bit unsigned integer. Can't be negative.
+    Because it's a 16-bit number, the total number of possible ports is 2^16, which equals 65,536.
+    <h4>The Three Categories</h4>
+    <ol>
+        <li>Well-Known Ports (Range: 0 - 1023)</li>
+        <li>Registered Ports (Range: 1024 - 49151)</li>
+        <li>Dynamic / Private / Ephemeral Ports (Range: 49152 - 65535)</li>
+    </ol>
+
+    </p>
+    <h3>Video Lecture</h3>
+    <iframe src="https://www.youtube.com/embed/1pcikNlDB-4?si=2GHfcRh4pjT5svRh" frameborder="0" allowfullscreen autoplay></iframe>
+</body>
+</html>

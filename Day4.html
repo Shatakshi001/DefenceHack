@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web Development Course by Rohit Sir</h1>
+    <h1><a href="Day1.html">Day 1</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day2.html">Day 2</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day3.html">Day 3</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day4.html">Day 4</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day5.html">Day 5</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day6.html">Day 6</a></h1>
+    
+    <h2>File Path System in HTML</h2>
+    <p>HTML file paths specify the location of files or resources that a webpage needs to access, such as images, videos, scripts, or other HTML documents. These paths tell the web browser where to find the files required to display the content correctly or to execute scripts as intended.
+    <br>
+    To insert a file in a web page, its source must be known. For example, the syntax (&lt;img src=" " alt=" "&gt;) is used to insert an image file, where the path of the file is mentioned in the source (src).
+    <br>
+    The browser needs an exact, unambiguous address to locate the file. A file path is that address.
+    <br>
+    <h3>Types of File Paths</h3>
+    There are two main types of HTML File Paths:
+    <ol>
+        <li>Relative File Paths</li>
+        <li>Absolute File Paths</li>
+    </ol>
+    <h3>Relative File Paths(Most Important for the Projects)</h3>
+    Specify the path to a resource in relation to the location of the HTML file currently being viewed. Ideal for resources within the same website. Keeps your HTML portable if the domain changes since the path doesn't need to be updated.
+    <br>
+    <img src="./image43.png" height="200px" alt="relative path image">
+    <br>
+    <h4>Different Scenarios:</h4>
+    <ul>
+        <li><h4>Linking to a file in the SAME Folder:</h4> You are in index.html and want to link to about.html.They are neighbors, living in the same my-website/ folder. The directions are as simple as possible.Just use the filename.
+        <br>
+            <img src="./image44.png" height="50px" alt="sc1 Image">
+        </li>
+        <li><h4>Linking to a file in a SUB-FOLDER (Going Down):</h4>
+        You are in index.html and want to display logo.png. From index.html, you need to go into the images folder to find the logo. You write the folder name, a forward slash /, and then the filename.
+        <br>
+        <img src="./image45.png" height="50px" alt="sc2 image">
+        </li>
+        <li><h4>Linking to a file in a PARENT FOLDER (Going Up):</h4>
+        You are in contact.html (which is inside pages/) and you want to display logo.png (which is inside images/).  You can't go directly from pages/ to images/. You must first go up one level out of the pages folder to get back to the main my-website/ folder. From there, you can go down into the images folder. Two dots and a slash (../) means "go up one level. ../ takes you from pages/ up to my-website/. images/logo.png then takes you down into the images folder to find the file.
+        <br>
+        <img src="./image46.png" height="40px" alt="sc3 image">
+        </li>
+    </ul>
+    <h3>Absolute File Paths</h3>
+    An absolute file path gives the full, complete URL to a resource on the web. It starts with http:// or https://.
+    <br>
+    When to USE:
+    <br>
+    You ONLY use absolute paths when you are linking to a resource that is NOT on your own website.
+    <ol>
+        <li>Linking to another website.</li>
+        <li>Using a font from Google Fonts.</li>
+        <li>Using an image from an image-hosting service.</li>
+    </ol>
+    <img src="./image47.png" height="100px" alt="absolute image">
+    <br><br>
+    <h2>HTML Boilerplate Code</h2>
+    When starting a new web project, setting up a solid foundation is crucial. An HTML boilerplate serves as this foundation, providing a standard starting point that ensures best practices and compatibility across different browsers.
+    <br>
+    <h3>What is HTML Boilerplate?</h3>
+    An HTML boilerplate is a set of pre-written HTML, CSS, and JavaScript files that form the starting point for your web project. It includes essential elements like the doctype declaration, meta tags, link to CSS files, and script tags for JavaScript. The primary goal is to save time and ensure consistency by providing a robust template that follows industry standards.
+    <h3>Why USE an HTML Boilerplate?</h3>
+    Using an HTML boilerplate has several benefits:
+    <ul>
+        <li><b>Efficiency:</b> Quickly set up new projects without rewriting the same basic structure each time.</li>
+        <li><b>Consistency:</b> Maintain a consistent structure and style across multiple projects.</li>
+        <li><b>Best Practices:</b> Follow industry standards and best practices out of the box.</li>
+        <li><b>Cross-browser compatibility:</b> Ensure your site works well across different browsers and devices.</li>
+    </ul>
+    <h3>The Anatomy of the HTML Boilerplate</h3>
+    <img src="./image48.png" height="250px" alt="bplate code Image">
+    <h4>Essential Elements of HTML Boilerplate:</h4>
+    <ol>
+        <li><b>&lt;!DOCTYPE html&gt;</b>
+        <br>
+        This is the very first line and it's called the Document Type Declaration. In modern HTML5, it's incredibly simple. This specific line tells the browser: "Use the latest, standard-compliant mode for rendering this HTML document." It's a switch that prevents the browser from falling back into "quirks mode" (an old mode for rendering non-standard pages). It must always be the first thing in your file.
+        </li>
+        <li><b>&lt;html lang="en"&gt;.....&lt;/html&gt;</b>
+        This is the root element that wraps your entire page. The lang="en" attribute declares that the primary language of the page content is English. This is very important for accessibility and SEO. You'd change "en" to "es" for Spanish, "hi" for Hindi, etc.
+        </li>
+        <li><b>&lt;head&gt;.....&lt;/head&gt;</b>
+            The &lt;head&gt; section is the container for this metadata. Nothing you put inside the &lt;head&gt; will be displayed in the main browser window.
+        </li>
+        <li><b>&lt;meta charset="UTF-8"&gt;</b>
+        This meta tag explicitly tells the browser to use UTF-8, which is the universal standard character set for the web. It can represent almost any character and symbol from any language in the world. This line is essential to prevent text-encoding issues.
+        </li>
+        <li><b>&lt;meta name="viewport" ..."&gt;</b>
+         This specific meta tag is the cornerstone of responsive design.
+        <ul>
+            <li>width=device-width: This tells the browser: "Make the page's width equal to the screen width of the device it's being viewed on."</li>
+            <li>initial-scale=1.0: This sets the initial zoom level to 100% when the page is first loaded.</li>
+            <li>In simple terms: this line tells the browser to render the page in a way that is optimized for mobile screens.</li>
+        </ul>
+        </li>
+        <li><b>&lt;title&gt;.....&lt;/title&gt;</b>
+        The &lt;title&gt; tag sets the text that appears in the browser tab, in bookmark lists, and in search engine results. It's a critical piece of metadata for both usability and SEO.
+        </li>
+        <li><b>&lt;body&gt;.....&lt;/body&gt;</b>
+        The &lt;body&gt; section is the container for everything the user will actually see on the page: your headings, paragraphs, images, links, tables, etc. All the tags you've learned so far go inside the &lt;body&gt;.
+        </li>
+    </ol>
+    <h3>What is UTF-8?</h3>
+    UTF-8 is the character that represents each character using one to four bytes. UTF-8 is just like a dictionary which store the number corresponding to the character.
+    <br>
+    USE: Because ASCII can only store upto 256 characters of 1 byte. Widely used UTF-8. Support most of the character and display emojis.
+    <br>
+    <h3>Div Tag</h3>
+    The &lt;div&gt; tag, used in over 90% of web pages, divides content into sections and serves as a flexible container for text, images, and links. Easily styled with CSS and customized using classes or IDs, it often uses percentage-based widths like 50% or 33.33% for responsive layouts, making it key to web page structure.
+    <br>
+    <h3>class and id</h3>
+    The class attribute is used to specify one or more class names for an HTML element. The class attribute can be used on any HTML element. The class name can be used by CSS and JavaScript to perform certain tasks for elements with the specified class name. The class name in CSS stylesheet using "." symbol.
+    <br>
+    The id attribute is a unique identifier that is used to specify the document. It is used by CSS and JavaScript to perform a certain task for a unique element. In CSS, the id attribute is written using the # symbol followed by id.
+    <br>
+</p>
+<h3>Video Lecture</h3>
+<iframe src="https://youtube.com/embed/k78lNSAB8VY?si=VTG7Sh5_ToIXKKYG" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>

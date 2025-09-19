@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web Development Course by Rohit Sir</h1>
+    <h1><a href="Day1.html">Day 1</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day2.html">Day 2</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day3.html">Day 3</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day4.html">Day 4</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day5.html">Day 5</a>
+    &ensp; &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+    <a href="Day6.html">Day 6</a></h1>
+    <h2>Forms in HTML</h2>
+    <p><b>The First Principle: The Web Needs to Be a Two-Way Street</b>
+    <br>
+    The fundamental truth is that a website isn't just a brochure for you to read. For the web to be useful, it needs a way to collect information from the user and send it back to the server. Without this, you couldn't log in, search for a video, buy a product, post a comment, or send a message. The web would be a read-only library.
+    <h3>The Core Problem</h3>
+    How do we create a standardized, reliable system to:
+    <ol>
+        <li>Display interactive fields for a user to fill in (text boxes, checkboxes, dropdowns).</li>
+        <li>Package the user's data neatly.</li>
+        <li>Send that package to a specific destination on a server.</li>
+        <li>Tell the server <i>how</i> the data is being sent.</li>
+    </ol>
+    The logical solution to this entire problem is the HTML &lt;form&gt;.
+    </p>
+    <p><h3>What are HTML Forms</h3>
+        HTML forms, defined using the &lt;form&gt; Tags are essential for collecting user input on web pages. They incorporate a variety of interactive controls such as text fields, numeric inputs, email fields, password fields, checkboxes, radio buttons, and submit buttons. Over 85% of websites rely on forms to gather data from users, making them a fundamental component of modern web development.
+        <br>
+        <img src="./image26.png" height="50px" alt="form Image">
+        <br>
+        <h3>The &lt;input&gt; Element </h3>
+        It is used to get input data from various types such as text, password, email, etc by changing its type.
+        <br>
+        <img src="./image27.png" height="50px" alt="input Image">
+        <br>
+        <h3>The &lt;label&gt; Element</h3>
+        <b>The Problem:</b> We have a box, but the user has no idea what they are supposed to type into it. Is it for a name? An email? A search query? The box is meaningless without a description.
+        <b>The Solution:</b> We need to add a descriptive piece of text. The correct HTML tag for this is the &lt;label&gt; tag. It's a tag specifically designed to be the title for a form field.
+        <br>
+        <img src="./image28.png" height="60px" alt="label Image">
+        <br>
+        Result: Now it is user readable that you you need to input your Name on the box. But still the label and the input tag are not connected. The browser don't know that they are one.
+        <br>
+        <h4>The Need for Connection: id and for</h4>
+        <b>The Problem:</b> How can we create a direct, unbreakable link between the label "Name:" and its specific input box? We need this for two reasons:
+        <ol>
+            <li><b>Usability:</b> It would be great if a user could click on the text of the label to activate the input box.</li>
+            <li><b>Accessibility:</b> Screen readers for visually impaired users need to know which label describes which input so they can announce it correctly.</li>
+        </ol>
+        <b>The Solution:</b> We need a unique naming system.
+        <ol>
+            <li>First, we give our input box a unique name that no other element on the page has. The attribute for a unique name is id. Let's give it an id of "name".</li>
+            <li>Next, we tell the label which element it is <b>for</b>. The for attribute on the label must match the <b>id</b> of the input.</li>
+        </ol>
+        <img src="./image29.png" height="60px" alt="forid Image">
+        <br>
+        Result: We have build the connection between input and label tags.
+        <br>
+        <h3>The Need for Submission: The &lt;form&gt; and submit</h3>
+        <b>The Problem:</b> We have a field for the user to fill out, but we have no way for them to actually <i>submit</i> this information. We need a container for our fields and a "Go" button.
+        <br>
+        <b>The Solution:</b> 
+        <ol>
+            <li>We wrap all our form fields in a &lt;form&gt; tag. This tag acts as the main container that tells the browser, "Everything inside here is part of one single submission."</li>
+            <li>We add a button that tells the form to submit. The simplest way is &lt;input type="submit"&gt;.</li>
+        </ol>
+        <img src="./image30.png" height="134px" alt="submit Image">
+        <br>
+        <h3>The Need for Data Identification: The name Attribute</h3>
+        <b>The Problem:</b>The Problem: When the form is submitted, the browser needs to package the data to send to a server. How does it label the data? If a user types "Arjun" in the first box, how does the server know that "Arjun" is the name? The id attribute is only for use within the page; it is not sent to the server.
+        <br>
+        <b>The Solution:</b> We need another attribute whose sole purpose is to be the "data label" or the "key" for the submitted value. This is the <b>name</b> attribute.
+        <br>
+        <img src="./image31.png" height="100px" alt="name Image">
+        <br>
+        <h3>The Need for "Select One": Radio Buttons</h3>
+        <b>The Problem:</b> What if you want to ask a question where the user can only choose one option from a predefined list?
+        For example, "What is your gender?" A text box is a bad solution—users could type anything ("Male", "M"), making the data inconsistent.
+        <br>
+        <b>The Solution:</b> We need an input type where selecting one option automatically de-selects all others. This is the radio button: &lt;input type="radio"&gt;.
+        <br>
+        <b>The Rule: All radio buttons in a single group must share the same name attribute.</b> The <b>name</b> acts as the group identifier.
+        <br>
+        <img src="./image32.png" height="200px" alt="radio element Image">
+        <br>
+        <h3>The Need for "Select Many": Checkboxes</h3>
+        <b>The Problem:</b> Now, what if you want to ask a question where the user can choose multiple options?  The radio button won't work, because you can only select one.
+        <br>
+        <b>The Solution:</b> We need an input type that allows for multiple selections. This is the checkbox: &lt;input type="checkbox"&gt;
+        <br>
+        Checkboxes that are part of the same question should also share the same name.
+        <br>
+        <img src="./image33.png" height="300px" alt="checkbox element Image">
+        <h3>The &lt;button&gt; Element</h3>
+        <b>The Problem:</b> Our &lt;input type="submit"&gt; works, but it's very limited. You can only put plain text in it using the value attribute. What if you want a button with an image, or with bold text?
+        <br>
+        <b>The Solution:</b> Use the &lt;button&gt; element. It's a container tag, meaning it has an opening and closing tag. This allows you to put other HTML elements inside it.
+        <br>
+        <img src="./image34.png" height="100px" alt="new submit button Image">
+        <br>
+        <h3>&lt;textarea&gt;: The Long-Form Text</h3>
+        <b>The Problem:</b> Our &lt;input type="text"&gt; is great for single lines of text like a name, but it's terrible for longer input, like a user comment or a shipping address. The text just scrolls sideways and becomes unreadable.
+        <br>
+        <b>The Solution:</b> We need a dedicated element for multi-line text input. This is the &lt;textarea&gt; tag.        Unlike &lt;input&gt;,&lt;textarea&gt; is a container tag (it has an opening and closing tag). It's also linked to a &lt;label&gt; using the same for and id pattern.
+        <br>
+        <img src="./image35.png" height="350px" alt="textarea type Image">
+        <br>
+        <h3>The Dropdown(&lt;select&gt;)</h3>
+        <b>The Problem:</b> Radio buttons are good for 3-4 options, but what if you need the user to select one option from a very long list, like their country? A list of 200 radio buttons would make the page incredibly long and difficult to use
+        <br>
+        <b>The Solution:</b> A dropdown menu. It compactly hides all the options until the user clicks on it. This is created with the &lt;select&gt; tag, which contains multiple &lt;option&gt; tags.
+        <br>
+        <img src="./image36.png" height="400px" alt="select tag Image">
+        <br>
+        <h3>HTML More Specialized Inputs</h3>
+        <h4>type="password"</h4>
+        &lt;input type="password"&gt;. It masks the input with dots or asterisks.
+        <br>
+        <img src="./image49.png" height="30px" alt="password Image">
+        <br>
+        <h4>type="date"</h4>
+        &lt;input type="date"&gt; most browsers will display a user-friendly calendar date picker.
+        <br>
+        <img src="./image50.png" height="30px" alt="date Image">
+        <br>
+        <h4>type="file"</h4>
+        &lt;input type="file"&gt; will upload file from your desktop.
+        <br>
+        <img src="./image51.png" height="40px" alt="file Image">
+        <br>
+        <h4>type="email"</h4>
+        &lt;input type="email"&gt; will enter your email address.
+        <br>
+        <img src="./image52.png" height="30px" alt="email Image">
+        <br>
+        <h4>type="url"</h4>
+        &lt;input type="url"&gt; will ask your profile url. Like LinkedIn, Instagram profiles url.
+        <br>
+        <img src="./image53.png" height="40px" alt="url Image">
+
+    </p>
+    <h3>Video Lecture</h3>
+    <iframe src="https://youtube.com/embed/a4j9R_DvZ8M?si=3NxfbBytwWOOT977" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
